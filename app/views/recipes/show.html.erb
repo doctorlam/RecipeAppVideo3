@@ -1,5 +1,9 @@
 <p style="color: green"><%= notice %></p>
-
+<% if @recipe.image? %>
+    <%= image_tag @recipe.image.url, class: "recipe-show" %>
+  <% else %>
+     This is where the image would go if it were uploaded to the recipe.
+<% end %>
 <%= render @recipe %>
 <h3>Ingredients</h3>
 <ul>
